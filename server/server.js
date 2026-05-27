@@ -1,5 +1,3 @@
-
-
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
@@ -20,17 +18,15 @@ connectDB();
 
 // ✅ CORS configuration
 const allowedOrigins = [
-  "https://www.modevianinhertz.work", 
-  "https://www.modevianinehertz.in",
-  "http://localhost:5173",             // Local dev Vite
-  "http://localhost:3000",             // Optional, if you test with React dev server
-  process.env.FRONTEND_URL             // Fallback if you set FRONTEND_URL
+  "https://primenovaconsulting.club",
+  "https://www.primenovaconsulting.club",
+  "http://localhost:5173", // Local dev Vite
+  "http://localhost:3000", // Optional, if you test with React dev server
+  process.env.FRONTEND_URL, // Fallback if you set FRONTEND_URL
 ];
 
 const corsOptions = {
   origin: function (origin, callback) {
-    
-
     if (!origin) {
       // Allow requests with no origin (Postman, curl, mobile apps)
       return callback(null, true);
@@ -50,11 +46,10 @@ const corsOptions = {
       console.error("❌ Error parsing origin URL:", err);
     }
 
-   
     return callback(new Error("Not allowed by CORS"));
   },
   credentials: true,
-  optionsSuccessStatus: 200 // For legacy browsers
+  optionsSuccessStatus: 200, // For legacy browsers
 };
 
 app.use(cors(corsOptions));
@@ -71,9 +66,9 @@ app.use(
     saveUninitialized: false,
     cookie: {
       secure: process.env.NODE_ENV === "production",
-      maxAge: 24 * 60 * 60 * 1000 // 24 hours
-    }
-  })
+      maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    },
+  }),
 );
 
 // Passport initialization
