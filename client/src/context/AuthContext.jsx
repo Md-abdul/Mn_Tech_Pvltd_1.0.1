@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
 
       const response = await axios.get(
         // `https://mn-tech-pvltd-596.vercel.app/api/users/${userIdStr}`,
-        `http://localhost:3001/api/users/${userIdStr}`,
+        `https://mn-tech-pvltd-1-0-1.vercel.app/api/users/${userIdStr}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -66,7 +66,7 @@ export const AuthProvider = ({ children }) => {
       if (token) {
         // Call the backend logout endpoint
         await axios.post(
-          "http://localhost:3001/api/users/logout",
+          "https://mn-tech-pvltd-1-0-1.vercel.app/api/users/logout",
           {},
           {
             headers: {

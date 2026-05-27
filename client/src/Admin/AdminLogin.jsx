@@ -26,7 +26,7 @@ const AdminLogin = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/admin/login",
+        "https://mn-tech-pvltd-1-0-1.vercel.app/api/admin/login",
         { email, password }
       );
 

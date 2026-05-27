@@ -28,7 +28,7 @@ const AllUser = () => {
       setLoading(true);
       const token = localStorage.getItem("adminToken");
       const response = await axios.get(
-        `http://localhost:3001/api/users?page=${page}`,
+        `https://mn-tech-pvltd-1-0-1.vercel.app/api/users?page=${page}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

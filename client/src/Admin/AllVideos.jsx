@@ -11,7 +11,7 @@ const AllVideos = () => {
       try {
         const token = localStorage.getItem("adminToken");
         const response = await axios.get(
-          "http://localhost:3001/api/video_upload",
+          "https://mn-tech-pvltd-1-0-1.vercel.app/api/video_upload",
           {
             headers: {
               Authorization: `Bearer ${token}`,

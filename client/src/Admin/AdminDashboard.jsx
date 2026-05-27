@@ -29,10 +29,10 @@ const AdminDashboard = () => {
       try {
         const token = localStorage.getItem('adminToken');
         const [usersRes, videosRes] = await Promise.all([
-          axios.get('http://localhost:3001/api/users', {
+          axios.get('https://mn-tech-pvltd-1-0-1.vercel.app/api/users', {
             headers: { Authorization: `Bearer ${token}` }
           }),
-          axios.get('http://localhost:3001/api/video_upload', {
+          axios.get('https://mn-tech-pvltd-1-0-1.vercel.app/api/video_upload', {
             headers: { Authorization: `Bearer ${token}` }
           })
         ]);

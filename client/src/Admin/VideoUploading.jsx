@@ -46,7 +46,7 @@ const VideoUploading = () => {
 
     // 1. Get Cloudinary upload signature
     const signatureResponse = await axios.get(
-      "http://localhost:3001/api/video_upload/upload-signature",
+      "https://mn-tech-pvltd-1-0-1.vercel.app/api/video_upload/upload-signature",
       {
         params: { folder: "videos" },
         headers: {
@@ -86,7 +86,7 @@ const VideoUploading = () => {
 
     // 4. Save video metadata to MongoDB
     const saveResponse = await axios.post(
-      "http://localhost:3001/api/video_upload",
+      "https://mn-tech-pvltd-1-0-1.vercel.app/api/video_upload",
       {
         title,
         description,

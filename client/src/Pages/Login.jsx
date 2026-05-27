@@ -73,12 +73,12 @@ const Login = () => {
     if (urlReferral) {
       referralCode = urlReferral;
       localStorage.setItem("referralCode", referralCode);
-      console.log("Referral code stored:", referralCode);
+      // console.log("Referral code stored:", referralCode);
     }
 
     const state = referralCode ? JSON.stringify({ referralCode }) : undefined;
 
-    const backendUrl = "https://mn-tech-pvltd-596.vercel.app";
+    const backendUrl = "https://mn-tech-pvltd-1-0-1.vercel.app";
     window.location.href = `${backendUrl}/auth/google${
       state ? `?state=${encodeURIComponent(state)}` : ""
     }`;

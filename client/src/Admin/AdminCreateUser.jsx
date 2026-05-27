@@ -29,7 +29,8 @@ const AdminCreateUser = () => {
     try {
       const token = localStorage.getItem("adminToken");
       const response = await axios.get(
-        "http://localhost:3001/api/users?limit=100",
+        // "http://localhost:3001/api/users?limit=100",
+        "https://mn-tech-pvltd-1-0-1.vercel.app/api/users?limit=100",
         {
           headers: { Authorization: `Bearer ${token}` }
         }
